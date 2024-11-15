@@ -17,17 +17,17 @@
         }
 
         .title {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: normal;
             color: #FFD700;
-            -webkit-text-stroke: 2px #000;
+            -webkit-text-stroke: 1px #000;
             margin: 20px 0;
             text-align: center;
         }
 
         .line {
             width: 80%;
-            height: 5px;
+            height: 4px;
             background: #FFD700;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
@@ -57,33 +57,28 @@
 
         .text-box {
             flex: 1;
-            background-color: #FFD700;
+            background-color: transparent; /* Nền tàng hình */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            color: #000;
-            font-size: 1.2rem;
-            font-weight: bold;
+            color: #FFD700;
+            font-size: 1rem; /* Chữ nhỏ hơn */
+            font-weight: normal;
             text-align: center;
+            box-shadow: none;
         }
 
         .image-box {
             flex: 1;
             height: 150px;
-            background-color: #FFD700;
             border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            background-image: url('https://via.placeholder.com/300x150'); /* Replace with your image */
+            background-image: url('https://via.placeholder.com/300x150'); /* Thay URL với ảnh của bạn */
             background-size: cover;
             background-position: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
         }
 
-        .text-box:nth-child(odd) {
-            text-align: left;
-        }
-
-        .text-box:nth-child(even) {
-            text-align: right;
+        .row:last-child .image-box {
+            display: none; /* Loại bỏ Image Box lớn không mong muốn */
         }
     </style>
 </head>
