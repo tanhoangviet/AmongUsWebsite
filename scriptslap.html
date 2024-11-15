@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternating Layout</title>
+    <title>Article Website</title>
     <style>
         body {
             margin: 0;
@@ -18,43 +18,7 @@
             overflow: hidden;
         }
 
-        .background-dot {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: rgba(128, 128, 128, 0.6);
-            border-radius: 50%;
-            top: 20%;
-            left: 30%;
-            box-shadow: 0 0 5px black;
-            animation: float 6s infinite ease-in-out;
-        }
-
-        .background-dot:nth-child(2) {
-            width: 70px;
-            height: 70px;
-            top: 50%;
-            left: 70%;
-            animation: float-reverse 8s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes float-reverse {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(20px);
-            }
-        }
+        
 
         .title {
             font-size: 3rem;
@@ -117,7 +81,7 @@
         }
 
         .image-box:nth-child(1) {
-            background-image: url('https://via.placeholder.com/300x150/ff0000');
+            background-image: url('https://media.discordapp.net/attachments/1091347775930769419/1306993749951381627/IMG_20241115_214534.jpg?ex=6738b048&is=67375ec8&hm=4bf2c8c3ce648f61b750cbcd9017c08a8e7120800afe197f18b008f30ba8f132&');
         }
 
         .image-box:nth-child(2) {
@@ -139,23 +103,15 @@
     </style>
 </head>
 <body>
-    <div class="background-dot"></div>
-    <div class="background-dot"></div>
-    <h1 class="title">Alternating Layout</h1>
+    
+    <h1 class="title">Article Hub Website</h1>
     <div class="line"></div>
     <div class="content-container">
         <div class="row">
-            <div class="text-box">Text Left</div>
+            <div class="text-box">Article Hub Made In 10/4/2023</div>
             <div class="image-box"></div>
         </div>
-        <div class="row">
-            <div class="text-box">Text Right</div>
-            <div class="image-box"></div>
-        </div>
-        <div class="row">
-            <div class="text-box">Text Left</div>
-            <div class="image-box"></div>
-        </div>
+        
     </div>
     <div class="line-end"></div>
 </body>
