@@ -8,12 +8,51 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #FFD700, #000);
+            background: radial-gradient(circle, rgba(128, 128, 128, 0.2) 1%, rgba(0, 0, 255, 0.8) 80%);
+            position: relative;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .background-dot {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(128, 128, 128, 0.6);
+            border-radius: 50%;
+            top: 20%;
+            left: 30%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .background-dot:nth-child(2) {
+            width: 70px;
+            height: 70px;
+            top: 50%;
+            left: 70%;
+            animation: float-reverse 8s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes float-reverse {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
         }
 
         .title {
@@ -48,59 +87,64 @@
         }
 
         .row:nth-child(odd) {
-            flex-direction: row; /* Text Left, Image Right */
+            flex-direction: row;
         }
 
         .row:nth-child(even) {
-            flex-direction: row-reverse; /* Text Right, Image Left */
+            flex-direction: row-reverse;
         }
 
         .text-box {
             flex: 1;
-            background-color: transparent; /* Nền tàng hình */
+            background-color: transparent;
             padding: 20px;
             border-radius: 8px;
             color: #FFD700;
-            font-size: 1rem; /* Chữ nhỏ hơn */
+            font-size: 1rem;
             font-weight: normal;
             text-align: center;
-            box-shadow: none;
         }
 
         .image-box {
             flex: 1;
             height: 150px;
             border-radius: 8px;
-            background-image: url('https://via.placeholder.com/300x150'); /* Thay URL với ảnh của bạn */
+            background-image: url('https://via.placeholder.com/300x150'); /* Thay URL với ảnh */
             background-size: cover;
             background-position: center;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            position: relative;
         }
 
-        .row:last-child .image-box {
-            display: none; /* Loại bỏ Image Box lớn không mong muốn */
+        .line-end {
+            width: 80%;
+            height: 4px;
+            background: #FFD700;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            align-self: center;
         }
     </style>
 </head>
 <body>
+    <div class="background-dot"></div>
+    <div class="background-dot"></div>
     <h1 class="title">Alternating Layout</h1>
     <div class="line"></div>
     <div class="content-container">
-        <!-- Row 1 -->
         <div class="row">
-            <div class="text-box">This is Left Text</div>
+            <div class="text-box">Text Left</div>
             <div class="image-box"></div>
         </div>
-        <!-- Row 2 -->
         <div class="row">
-            <div class="text-box">This is Right Text</div>
+            <div class="text-box">Text Right</div>
             <div class="image-box"></div>
         </div>
-        <!-- Row 3 -->
         <div class="row">
-            <div class="text-box">This is Left Text</div>
+            <div class="text-box">Text Left</div>
             <div class="image-box"></div>
         </div>
     </div>
+    <div class="line-end"></div>
 </body>
 </html>
